@@ -58,7 +58,7 @@ a {
   color: #fff;
   text-align: center;
   background-color: #159957;
-  background-image: url('nyoman.jpg');
+  background-image: url('https://s3-ap-southeast-1.amazonaws.com/nyoman/nyoman.jpg');
   background-size: cover; 
   background-position: left; 
   /*min-height: 500px;*/

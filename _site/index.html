@@ -10,17 +10,17 @@
     <meta property="og:site_name" content="I Nyoman Ardika's Taxi Service" />
     <meta property="og:title" content="I Nyoman Ardika's Taxi Service" />
     <meta property="og:type" content="website" />
-    <!-- <meta property="og:image" content="http://burntfen.com/assets/img/avatar.png" /> -->
-    <!-- <meta property="og:image:type" content="image/png" /> -->
-    <!-- <meta property="og:image:width" content="510" /> -->
-    <!-- <meta property="og:image:height" content="515" /> -->
+    <meta property="og:image" content="https://s3-ap-southeast-1.amazonaws.com/nyoman/nyoman.jpg" />
+    <meta property="og:image:type" content="image/jpg" />
+    <meta property="og:image:width" content="1400" />
+    <meta property="og:image:height" content="797" />
 
     <!-- Twitter: card tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="I Nyoman Ardika's Taxi Service">
     <meta name="twitter:description" content="I Nyoman Ardika's Taxi service - the best taxi service in Bali">
-    <!-- <meta name="twitter:image" content="http://burntfen.com/assets/img/avatar.png"> -->
-    <!-- <meta name="twitter:url" content="http://burntfen.com"> -->
+    <meta name="twitter:image" content="https://s3-ap-southeast-1.amazonaws.com/nyoman/nyoman.jpg">
+    <meta name="twitter:url" content="http://inyoman.com">
 
   <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
@@ -35,11 +35,11 @@
   <body>
     <section class="page-header">
       <div class="text-container">
-        <h1 class="project-name">Nyoman Ardika</h1>
+        <h1 class="project-name">I Nyoman Ardika</h1>
         <h2 class="project-tagline">Your Personal Taxi Driver in Ubud, Bali</h2>
         <a href="callto:006287862510239" class="cta">Call</a>
         <a href="mailto:nyomanardika59@yahoo.co.id" class="cta">Email</a>
-        <p class="time">It is <span id="time_span"></span> in Bali.</p>
+        <p class="time"><span id="time_span"></span></p>
       </div>
     </section>
 
@@ -73,7 +73,7 @@
       function updateTime(){
         moment.tz.add('Australia/Perth|AWST|-90 -80|0101|1Lzm0 1zb0 Op0');
 
-        var test = moment().tz('Australia/Perth').format('h:mm a');  //
+        var test = 'It is ' + moment().tz('Australia/Perth').format('h:mm a') + ' in Bali.';  //
 
         document.getElementById('time_span').innerHTML = test;
       }

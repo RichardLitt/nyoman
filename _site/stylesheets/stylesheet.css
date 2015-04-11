@@ -306,3 +306,11 @@ a.cta:hover, a.cta:focus {
 @media screen and (max-width: 42em) {
   .site-footer {
     font-size: 0.9rem; } }
+
+img.avatar {
+  max-width: 85px;
+  float: left;
+  opacity: 0.6;
+  border-radius: 50%;
+  margin: 5px 20px 20px 0px;
+}

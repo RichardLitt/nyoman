@@ -39,9 +39,9 @@
       <div class="text-container">
         <h1 class="project-name">I Nyoman Ardika</h1>
         <h2 class="project-tagline">Your Personal Taxi Driver in Ubud, Bali</h2>
-        <a href="callto:006287862510239" class="cta">Call</a>
+        <a id="call" href="callto:006287862510239" class="cta" style="display:none;">Call</a>
         <a href="mailto:nyomanardika59@yahoo.co.id" class="cta">Email</a>
-        <p class="time"><span id="time_span"></span></p>
+        <!-- <p class="time"><span id="time_span"></span></p> -->
       </div>
     </section>
 
@@ -75,12 +75,14 @@
     </section>
 
     <script type="text/javascript">
-      function updateTime(){
+      function updateTime() {
         moment.tz.add('Australia/Perth|AWST|-90 -80|0101|1Lzm0 1zb0 Op0');
-
-        var test = 'It is ' + moment().tz('Australia/Perth').format('h:mm a') + ' in Bali.';  //
-
-        document.getElementById('time_span').innerHTML = test;
+        var time = moment().tz('Australia/Perth').hour();
+        if (time >= 7 && time <= 22) {
+          document.getElementById('call').style.display = '';
+        }
+        // var test = 'It is ' + time.format('h:mm a') + ' in Bali.';  //
+        // document.getElementById('time_span').innerHTML = test;
       }
       setInterval(updateTime, 1000);
     </script>
